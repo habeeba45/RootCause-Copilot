@@ -1,0 +1,8 @@
+{
+  "id": "checkout-failures",
+  "title": "Checkout failures and elevated 502s",
+  "description": "Customers report failed checkouts. API gateway 502 rate spiked shortly after 14:05 UTC.",
+  "severity": "SEV-1",
+  "reported_at": "2026-11-18T14:17:00Z",
+  "expected_root_cause": "payment-service v2.14.0 reduced the DB connection pool (50 -> 10), exhausting connections"
+}

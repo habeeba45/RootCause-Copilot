@@ -1,0 +1,29 @@
+[
+  {
+    "id": "CHG-7710",
+    "timestamp": "2026-11-17T08:20:00Z",
+    "service": "search-service",
+    "type": "infrastructure",
+    "description": "Elasticsearch node pool scaled 6 -> 8 nodes; shard rebalance",
+    "author": "infra-bot",
+    "version": null
+  },
+  {
+    "id": "CHG-7714",
+    "timestamp": "2026-11-17T09:00:00Z",
+    "service": "recommendation-service",
+    "type": "deployment",
+    "description": "Release recommendation-service v3.2.0 - add in-memory embedding cache for personalised recs",
+    "author": "ci-pipeline",
+    "version": "v3.2.0"
+  },
+  {
+    "id": "CHG-7722",
+    "timestamp": "2026-11-17T09:50:00Z",
+    "service": "catalog-service",
+    "type": "config",
+    "description": "Lower recommendation call timeout to 800ms (mitigation)",
+    "author": "j.alvarez",
+    "version": null
+  }
+]

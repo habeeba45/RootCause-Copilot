@@ -1,0 +1,29 @@
+[
+  {
+    "id": "CHG-9902",
+    "timestamp": "2026-11-16T18:00:00Z",
+    "service": "orders-service",
+    "type": "deployment",
+    "description": "Deploy orders-service v1.41.0 - pagination improvements",
+    "author": "ci-pipeline",
+    "version": "v1.41.0"
+  },
+  {
+    "id": "CHG-9905",
+    "timestamp": "2026-11-16T23:10:00Z",
+    "service": "notification-service",
+    "type": "config",
+    "description": "Increase Kafka consumer max.poll.records 200 -> 500",
+    "author": "r.singh",
+    "version": null
+  },
+  {
+    "id": "CHG-9910",
+    "timestamp": "2026-11-17T00:35:00Z",
+    "service": "auth-service",
+    "type": "infrastructure",
+    "description": "Emergency rotation of auth-service.internal TLS certificate (mitigation)",
+    "author": "oncall-sre",
+    "version": null
+  }
+]

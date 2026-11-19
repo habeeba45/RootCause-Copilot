@@ -1,0 +1,82 @@
+{
+  "services": [
+    {
+      "name": "web-frontend",
+      "tier": "edge",
+      "owner": "web-team"
+    },
+    {
+      "name": "api-gateway",
+      "tier": "edge",
+      "owner": "platform"
+    },
+    {
+      "name": "auth-service",
+      "tier": "core",
+      "owner": "identity"
+    },
+    {
+      "name": "checkout-service",
+      "tier": "core",
+      "owner": "commerce"
+    },
+    {
+      "name": "inventory-service",
+      "tier": "core",
+      "owner": "commerce"
+    },
+    {
+      "name": "payment-service",
+      "tier": "core",
+      "owner": "payments"
+    },
+    {
+      "name": "redis-cache",
+      "tier": "data",
+      "owner": "platform"
+    },
+    {
+      "name": "postgres-payments",
+      "tier": "data",
+      "owner": "dba"
+    }
+  ],
+  "edges": [
+    {
+      "from": "web-frontend",
+      "to": "api-gateway"
+    },
+    {
+      "from": "api-gateway",
+      "to": "auth-service"
+    },
+    {
+      "from": "api-gateway",
+      "to": "checkout-service"
+    },
+    {
+      "from": "api-gateway",
+      "to": "inventory-service"
+    },
+    {
+      "from": "checkout-service",
+      "to": "payment-service"
+    },
+    {
+      "from": "checkout-service",
+      "to": "inventory-service"
+    },
+    {
+      "from": "inventory-service",
+      "to": "redis-cache"
+    },
+    {
+      "from": "auth-service",
+      "to": "redis-cache"
+    },
+    {
+      "from": "payment-service",
+      "to": "postgres-payments"
+    }
+  ]
+}

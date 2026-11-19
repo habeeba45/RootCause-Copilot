@@ -1,0 +1,38 @@
+[
+  {
+    "id": "CHG-4812",
+    "timestamp": "2026-11-18T13:40:00Z",
+    "service": "inventory-service",
+    "type": "feature_flag",
+    "description": "Enabled 'bulk-reservations' feature flag for 10% of tenants",
+    "author": "m.chen",
+    "version": null
+  },
+  {
+    "id": "CHG-4817",
+    "timestamp": "2026-11-18T14:05:00Z",
+    "service": "payment-service",
+    "type": "deployment",
+    "description": "Deploy payment-service v2.14.0 - refactor connection handling; db.pool.maxSize changed 50 -> 10",
+    "author": "ci-pipeline",
+    "version": "v2.14.0"
+  },
+  {
+    "id": "CHG-4819",
+    "timestamp": "2026-11-18T14:27:00Z",
+    "service": "checkout-service",
+    "type": "config",
+    "description": "Increase payment-client timeout 5000ms -> 8000ms (mitigation attempt)",
+    "author": "s.okafor",
+    "version": null
+  },
+  {
+    "id": "CHG-4801",
+    "timestamp": "2026-11-18T10:00:00Z",
+    "service": "auth-service",
+    "type": "deployment",
+    "description": "Deploy auth-service v5.3.1 - dependency upgrades",
+    "author": "ci-pipeline",
+    "version": "v5.3.1"
+  }
+]

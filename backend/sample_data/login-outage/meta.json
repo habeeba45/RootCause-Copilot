@@ -1,0 +1,8 @@
+{
+  "id": "login-outage",
+  "title": "Mobile login outage - widespread 401s",
+  "description": "Mobile users unable to log in since midnight UTC. Gateway returning 401/5xx for authenticated routes.",
+  "severity": "SEV-1",
+  "reported_at": "2026-11-17T00:09:00Z",
+  "expected_root_cause": "Expired TLS certificate on auth-service.internal broke gateway -> auth handshake"
+}

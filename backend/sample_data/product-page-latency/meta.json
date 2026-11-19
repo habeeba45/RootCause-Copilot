@@ -1,0 +1,8 @@
+{
+  "id": "product-page-latency",
+  "title": "Product pages slow, intermittent recommendation outages",
+  "description": "Product detail pages p95 latency above 2s since ~09:25 UTC. Recommendation widget often empty.",
+  "severity": "SEV-2",
+  "reported_at": "2026-11-17T09:30:00Z",
+  "expected_root_cause": "Memory leak in recommendation-service v3.2.0 embedding cache causing OOM kills"
+}

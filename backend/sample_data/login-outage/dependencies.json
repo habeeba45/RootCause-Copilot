@@ -1,0 +1,65 @@
+{
+  "services": [
+    {
+      "name": "mobile-bff",
+      "tier": "edge",
+      "owner": "mobile"
+    },
+    {
+      "name": "api-gateway",
+      "tier": "edge",
+      "owner": "platform"
+    },
+    {
+      "name": "auth-service",
+      "tier": "core",
+      "owner": "identity"
+    },
+    {
+      "name": "orders-service",
+      "tier": "core",
+      "owner": "orders"
+    },
+    {
+      "name": "notification-service",
+      "tier": "core",
+      "owner": "engagement"
+    },
+    {
+      "name": "users-db",
+      "tier": "data",
+      "owner": "dba"
+    },
+    {
+      "name": "kafka",
+      "tier": "data",
+      "owner": "platform"
+    }
+  ],
+  "edges": [
+    {
+      "from": "mobile-bff",
+      "to": "api-gateway"
+    },
+    {
+      "from": "api-gateway",
+      "to": "auth-service"
+    },
+    {
+      "from": "api-gateway",
+      "to": "orders-service"
+    },
+    {
+      "from": "auth-service",
+      "to": "users-db"
+    },
+    {
+      "from": "orders-service",
+      "to": "kafka"
+    },
+    {
+      "from": "notification-service",
+      "to": "kafka"
+    }
+  ]
+}

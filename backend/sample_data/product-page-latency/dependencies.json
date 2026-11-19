@@ -1,0 +1,65 @@
+{
+  "services": [
+    {
+      "name": "storefront-web",
+      "tier": "edge",
+      "owner": "web-team"
+    },
+    {
+      "name": "api-gateway",
+      "tier": "edge",
+      "owner": "platform"
+    },
+    {
+      "name": "catalog-service",
+      "tier": "core",
+      "owner": "catalog"
+    },
+    {
+      "name": "recommendation-service",
+      "tier": "core",
+      "owner": "ml-platform"
+    },
+    {
+      "name": "search-service",
+      "tier": "core",
+      "owner": "search"
+    },
+    {
+      "name": "elasticsearch",
+      "tier": "data",
+      "owner": "search"
+    },
+    {
+      "name": "feature-store",
+      "tier": "data",
+      "owner": "ml-platform"
+    }
+  ],
+  "edges": [
+    {
+      "from": "storefront-web",
+      "to": "api-gateway"
+    },
+    {
+      "from": "api-gateway",
+      "to": "catalog-service"
+    },
+    {
+      "from": "api-gateway",
+      "to": "search-service"
+    },
+    {
+      "from": "catalog-service",
+      "to": "recommendation-service"
+    },
+    {
+      "from": "recommendation-service",
+      "to": "feature-store"
+    },
+    {
+      "from": "search-service",
+      "to": "elasticsearch"
+    }
+  ]
+}
